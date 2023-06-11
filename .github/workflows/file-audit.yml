@@ -11,6 +11,6 @@ jobs:
       with:
         submodules: recursive
     - name: File Audit
-      uses: Weike-Gaming/file-audit@8c66cd0497e45ddf41a902e7bc82c8487127b984
+      uses: Weike-Gaming/file-audit@81d9b3cf5fde7699143a8afbf2d8f933e57149bf
       with:
         files-to-check: "AM_Mixer"
