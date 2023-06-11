@@ -17,7 +17,7 @@ jobs:
       with:
         format: space-delimited
     - name: File Audit
-      uses: Weike-Gaming/file-audit@d7e2f80da6196ca4152c94b6add668e0242ddb9e
+      uses: Weike-Gaming/file-audit@7013267f1d33403321b2f324800753e1322c7d9c
       with:
         github-output: "${{ steps.c.outputs.all }}"
         files-to-check: "Test.png DummyFile.txt"
