@@ -15,5 +15,5 @@ jobs:
     - name: File Audit
       uses: Weike-Gaming/file-audit@40edf1d40418ee22d212bc414474f2603979ecad
       with:
-        github-output: steps.abc.outputs
+        github-output: {{steps.abc.outputs}}
         files-to-check: "AM_Mixer"
