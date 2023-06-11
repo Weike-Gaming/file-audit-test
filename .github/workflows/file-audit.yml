@@ -16,23 +16,8 @@ jobs:
       id : c
       with:
         format: space-delimited
-        
-    - name: Printing
-      run: |
-        echo "All:"
-        echo "${{ steps.c.outputs.all }}"
-        echo "Added:"
-        echo "${{ steps.c.outputs.added }}"
-        echo "Removed:"
-        echo "${{ steps.c.outputs.removed }}"
-        echo "Renamed:"
-        echo "${{ steps.c.outputs.renamed }}"
-        echo "Modified:"
-        echo "${{ steps.c.outputs.modified }}"
-        echo "Added+Modified:"
-        echo "${{ steps.c.outputs.added_modified }}"
     - name: File Audit
-      uses: Weike-Gaming/file-audit@40edf1d40418ee22d212bc414474f2603979ecad
+      uses: Weike-Gaming/file-audit@a9fbabb52b376f8dfc36686748992c1cdecbc50d
       with:
-        github-output: "${{ steps.c.outputs.modified  }}"
-        files-to-check: "AM_Mixer"
+        github-output: "${{ steps.c.outputs.all }}"
+        files-to-check: "Test.png DummyFile.txt"
