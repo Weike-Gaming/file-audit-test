@@ -12,8 +12,22 @@ jobs:
       with:
         format: space-delimited
         submodules: recursive
+    - name: Printing
+      run: |
+        echo "All:"
+        echo "${{ steps.c.outputs.all }}"
+        echo "Added:"
+        echo "${{ steps.c.outputs.added }}"
+        echo "Removed:"
+        echo "${{ steps.c.outputs.removed }}"
+        echo "Renamed:"
+        echo "${{ steps.c.outputs.renamed }}"
+        echo "Modified:"
+        echo "${{ steps.c.outputs.modified }}"
+        echo "Added+Modified:"
+        echo "${{ steps.c.outputs.added_modified }}"
     - name: File Audit
       uses: Weike-Gaming/file-audit@40edf1d40418ee22d212bc414474f2603979ecad
       with:
-        github-output: "${{ steps.abc.outputs.modified  }}"
+        github-output: "${{ steps.c.outputs.modified  }}"
         files-to-check: "AM_Mixer"
