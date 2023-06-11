@@ -3,13 +3,14 @@ name: File Audit
 on: [pull_request, push]
 
 jobs:
-  runs-on: ubuntu-22.04 
-  steps:
-  - name: Checkout
-    uses: actions/checkout@v3
-    with:
-      submodules: recursive
-  - name: File Audit
-    uses: Weike-Gaming/file-audit@8c66cd0497e45ddf41a902e7bc82c8487127b984
-    with:
-      files-to-check:  ["AM_Mixer"]
+  file_audit_job:
+    runs-on: ubuntu-22.04 
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        submodules: recursive
+    - name: File Audit
+      uses: Weike-Gaming/file-audit@8c66cd0497e45ddf41a902e7bc82c8487127b984
+      with:
+        files-to-check: "AM_Mixer"
