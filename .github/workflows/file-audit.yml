@@ -17,7 +17,7 @@ jobs:
       with:
         format: space-delimited
     - name: File Audit
-      uses: Weike-Gaming/file-audit@v1
+      uses: Weike-Gaming/file-audit@bc029d5c9a3da5307e46046df424f520bd8c3ef3
       with:
         github-output: "${{ steps.c.outputs.all }}"
         files-to-check: "AM_Master.mixer"

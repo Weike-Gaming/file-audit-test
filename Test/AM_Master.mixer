@@ -16,7 +16,7 @@ AudioMixerEffectController:
   m_Bypass: 0
 --- !u!244 &-8381258522745975995
 AudioMixerEffectController:
-  m_ObjectHideFlags: 3
+  m_ObjectHideFlags: 4
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
