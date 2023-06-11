@@ -8,9 +8,12 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
+      id : c
       with:
+        format: space-delimited
         submodules: recursive
     - name: File Audit
-      uses: Weike-Gaming/file-audit@fc985fa468d1721777b6e6401a2c5ff98651dcfa
+      uses: Weike-Gaming/file-audit@40edf1d40418ee22d212bc414474f2603979ecad
       with:
+        github-output: steps.abc.outputs
         files-to-check: "AM_Mixer"
